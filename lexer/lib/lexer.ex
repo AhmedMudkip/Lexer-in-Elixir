@@ -1,18 +1,11 @@
 defmodule Lexer do
-  @moduledoc """
-  Documentation for `Lexer`.
-  """
+  # meant as a way to easily debug multiple programs
+  def read_from_file(file) when is_binary(file) do
+    path = "../text_input/"
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Lexer.hello()
-      :world
-
-  """
-  def hello do
-    :world
+    # prints the content of file
+    path
+    |> Path.join(file)
+    |> File.read!()
   end
 end
